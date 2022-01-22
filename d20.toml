@@ -1,0 +1,26 @@
+# Server configuration
+# The server can be hosted as a "local" server for one campaign
+# or it can be hosted as "distributed" for many campaigns
+
+# In the case of a local server, we can give it a config directly.
+# In the case of a distributed server,
+#   we need to tell it where to find the configs for each instance.
+#   This would be object storage or a server-local file.
+
+# A server can only be local or distributed. Do not put both.
+
+# Currently only local servers are supported
+#   and authentication is done with http basic auth
+
+[local]
+[local.config]
+name = "The Lost Mines of..."
+appdata = "/estar" # on windows this should start with a drive, such as "C:/"
+
+#[distributed]
+#[distributed.configs.s3]
+#secret="asdf91234yuhnkldm091mdasdlkaskld"
+#access="ASDFD8912U10SDF"
+#region="us-east-1"
+#endpoint="https://us-east-1.linodeobjects.com"
+#bucket_name="dnd-dnd-dnd"
